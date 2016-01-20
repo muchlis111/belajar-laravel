@@ -33,6 +33,30 @@ Route::get('task/{id}', function ($id){
 	]);
 });
 
+Route::get('update/{id}', function ($id){
+	return view('update', [
+		'tasks' => Task::find($id)
+	]);
+});
+
+Route::put('update/{id}',function ($id,request $requirest) {
+	$validation = Validator::make($requirest->all(), [
+		'name' => 'required|max:255',
+	]);
+
+	if ($validation->fails()) {
+		return redirect('/')
+			->withInput()
+			->withErrors($validation);
+	}
+	$task = Task::find($id);
+	$task->name = $requirest->name;
+	$task->save();
+
+	return redirect('/');
+
+});
+
 
 /**
  * Add New Task
