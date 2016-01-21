@@ -20,6 +20,7 @@ use App\Task;
 Route::get(	'/', function () {
     return view('tasks', [
     	'tasks' => Task::orderBy('created_at', 'asc')->get()
+
     ]);
 });
 
@@ -33,6 +34,10 @@ Route::get('task/{id}', function ($id){
 	]);
 });
 
+/**
+ * Update
+ */
+
 Route::get('update/{id}', function ($id){
 	return view('update', [
 		'tasks' => Task::find($id)
@@ -42,6 +47,7 @@ Route::get('update/{id}', function ($id){
 Route::put('update/{id}',function ($id,request $requirest) {
 	$validation = Validator::make($requirest->all(), [
 		'name' => 'required|max:255',
+		'address' => 'required|max:255',
 	]);
 
 	if ($validation->fails()) {
@@ -51,6 +57,7 @@ Route::put('update/{id}',function ($id,request $requirest) {
 	}
 	$task = Task::find($id);
 	$task->name = $requirest->name;
+	$task->address = $requirest->address;
 	$task->save();
 
 	return redirect('/');
@@ -64,6 +71,7 @@ Route::put('update/{id}',function ($id,request $requirest) {
 Route::post('/task', function (Request $request) {
 	$validator = Validator::make($request->all(), [
 		'name' => 'required|max:255',
+		'address' => 'required|max:255',
 	]);
 
 	if ($validator->fails()) {
@@ -74,6 +82,7 @@ Route::post('/task', function (Request $request) {
 
 	$task = new Task;
 	$task->name = $request->name;
+	$task->address = $request->address;
 	$task->save();
 
 	return redirect('/');
