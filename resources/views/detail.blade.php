@@ -17,6 +17,7 @@
                                 <tr>
                                     <td class="table-text"><div>Task</div></td>
                                     <td class="table-text"><div>{{ $tasks->name }}</div></td>
+                                    <td class="table-text"><div>{{ $tasks->alamat }}</div></td>
 
                                     <!-- Task Delete Button -->
                                     <td>

@@ -32,7 +32,31 @@ Route::get('task/{id}', function ($id) {
         'tasks' => Task::find($id)
     ]);
 });
+Route::get('update/{id}', function ($id) {
+    return view('update', [
+        'tasks' => Task::find($id)
+    ]);
+});
 
+Route::put('update/{id}',function ($id,request  $requirest){
+    $validation = Validator::make( $requirest->all(), [
+        'name' => 'required|max:255',
+        'alamat' => 'required|max:255',
+    ]);
+    if ($validation->fails()) {
+        return redirect('/')
+            ->withinput()
+            ->witherrors($validation);
+    }
+    $task = Task::find($id);
+    $task->name = $requirest->name;
+    $task->alamat = $requirest->alamat;
+    $task->save();
+
+    return redirect('/');
+
+
+});
 
 /**
  * Add New Task
@@ -40,6 +64,7 @@ Route::get('task/{id}', function ($id) {
 Route::post('/task', function (Request $request) {
     $validator = Validator::make($request->all(), [
         'name' => 'required|max:255|min:3',
+        'alamat' => 'required|max:255|min:3',
     ]);
 
     if ($validator->fails()) {
@@ -50,6 +75,7 @@ Route::post('/task', function (Request $request) {
 
     $task = new Task;
     $task->name = $request->name;
+    $task->alamat = $request->alamat;
     $task->save();
 
     return redirect('/');
