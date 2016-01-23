@@ -15,6 +15,7 @@
                              <tbody>
 
                                 <tr>
+<<<<<<< HEAD
                                     <td class="table-text"><div>Name</div></td>
                                     <td class="table-text"><div>{{ $tasks->name }}</div></td>
                                 </tr>
@@ -39,6 +40,24 @@
 
                                 </tr>
 
+=======
+                                    <td class="table-text"><div>Task</div></td>
+                                    <td class="table-text"><div>{{ $tasks->name }}</div></td>
+                                    <td class="table-text"><div>{{ $tasks->alamat }}</div></td>
+
+                                    <!-- Task Delete Button -->
+                                    <td>
+                                        <form action="/task/{{ $tasks->id }}" method="POST">
+                                            {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+
+                                            <button type="submit" class="btn btn-danger">
+                                                <i class="fa fa-trash"></i>Delete
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+>>>>>>> eb3f04ce6038f16465136d3aeb56c3e6ebbd1646
 
                             </tbody>
                         </table>

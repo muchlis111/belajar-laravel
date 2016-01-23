@@ -11,8 +11,13 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
 class User extends Model implements AuthenticatableContract,
+<<<<<<< HEAD
     AuthorizableContract,
     CanResetPasswordContract
+=======
+                                    AuthorizableContract,
+                                    CanResetPasswordContract
+>>>>>>> eb3f04ce6038f16465136d3aeb56c3e6ebbd1646
 {
     use Authenticatable, Authorizable, CanResetPassword;
 
@@ -36,6 +41,7 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+<<<<<<< HEAD
 
     /**
      * Get all of the tasks for the user.
@@ -44,4 +50,6 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->hasMany(Task::class);
     }
+=======
+>>>>>>> eb3f04ce6038f16465136d3aeb56c3e6ebbd1646
 }

@@ -5,7 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<<<<<<< HEAD
 	<title>Laravel Quickstart - Intermediate</title>
+=======
+	<title>Laravel Quickstart - Basic</title>
+>>>>>>> eb3f04ce6038f16465136d3aeb56c3e6ebbd1646
 
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet" type="text/css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -20,7 +24,11 @@
 			margin-top: 25px;
 		}
 
+<<<<<<< HEAD
 		.fa-btn {
+=======
+		button .fa {
+>>>>>>> eb3f04ce6038f16465136d3aeb56c3e6ebbd1646
 			margin-right: 6px;
 		}
 
@@ -30,9 +38,15 @@
 	</style>
 
 	<script>
+<<<<<<< HEAD
 		(function () {
 			$('#task-name').focus();
 		}());
+=======
+		$(function () {
+			$('#task-name').focus();
+		});
+>>>>>>> eb3f04ce6038f16465136d3aeb56c3e6ebbd1646
 	</script>
 </head>
 
@@ -48,13 +62,18 @@
 						<span class="icon-bar"></span>
 					</button>
 
+<<<<<<< HEAD
 					<a class="navbar-brand" href="/">Task List</a>
+=======
+					<a class="navbar-brand" href="#">Task List</a>
+>>>>>>> eb3f04ce6038f16465136d3aeb56c3e6ebbd1646
 				</div>
 
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
 						&nbsp;
 					</ul>
+<<<<<<< HEAD
 
 					<ul class="nav navbar-nav navbar-right">
 						@if (Auth::guest())
@@ -65,6 +84,8 @@
 							<li><a href="/auth/logout"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
 						@endif
 					</ul>
+=======
+>>>>>>> eb3f04ce6038f16465136d3aeb56c3e6ebbd1646
 				</div>
 			</div>
 		</nav>

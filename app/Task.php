@@ -2,11 +2,15 @@
 
 namespace App;
 
+<<<<<<< HEAD
 use App\User;
+=======
+>>>>>>> eb3f04ce6038f16465136d3aeb56c3e6ebbd1646
 use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
+<<<<<<< HEAD
     /**
      * The attributes that are mass assignable.
      *
@@ -21,4 +25,7 @@ class Task extends Model
     {
         return $this->belongsTo(User::class);
     }
+=======
+	//
+>>>>>>> eb3f04ce6038f16465136d3aeb56c3e6ebbd1646
 }
