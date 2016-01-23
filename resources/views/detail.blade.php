@@ -19,10 +19,26 @@
                                     <td class="table-text"><div>{{ $tasks->name }}</div></td>
                                 </tr>
                                 <tr>
-                                    <td class="table-text"><div>Address</div></td>
-                                    <td class="table-text"><div>{{ $tasks->address }}</div></td>
+                                    <td class="table-text"><div>alamat</div></td>
+                                    <td class="table-text"><div>{{ $tasks->alamat }}</div></td>
 
                                 </tr>
+                                <tr>
+                                    <td class="table-text"><div>umur</div></td>
+                                    <td class="table-text"><div>{{ $tasks->umur }}</div></td>
+
+                                </tr>
+                                <tr>
+                                    <td class="table-text"><div>jenis_kelamin</div></td>
+                                    <td class="table-text"><div>{{ $tasks-> jenis_kelamin }}</div></td>
+
+                                </tr>
+                                <tr>
+                                    <td class="table-text"><div>jenis_kamar</div></td>
+                                    <td class="table-text"><div>{{ $tasks-> jenis_kamar }}</div></td>
+
+                                </tr>
+
 
                             </tbody>
                         </table>

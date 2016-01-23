@@ -26,6 +26,9 @@
 						</div>
 
 
+
+
+
 						<!-- Task Address -->
 						<div class="form-group">
 							<label for="task-address" class="col-sm-3 control-label">Address</label>
@@ -57,15 +60,23 @@
 					<div class="panel-body">
 						<table class="table table-striped task-table">
 							<thead>
-								<th>Task</th>
-								<th>Address</th>
+								<th>nama</th>
+								<th>alamat</th>
+								<th>umur</th>
+								<th>jenis_kelamin</th>
+								<th>jenis_kamar</th>
 								<th>&nbsp;</th>
 							</thead>
 							<tbody>
 								@foreach ($tasks as $task)
 									<tr>
 										<td class="table-text"><div>{{ $task->name }}</div></td>
-										<td class="table-text"><div>{{ $task->address }}</div></td>
+										<td class="table-text"><div>{{ $task->alamat }}</div></td>
+										<td class="table-text"><div>{{ $task->umur }}</div></td>
+										<td class="table-text"><div>{{ $task->jenis_kelamin }}</div></td>
+										<td class="table-text"><div>{{ $task->jenis_kamar }}</div></td>
+
+
 										<!-- Task Delete Button -->
 										<td>
 											<form action="/task/{{ $task->id }}" method="POST">

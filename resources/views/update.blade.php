@@ -13,27 +13,70 @@
                     @include('common.errors')
 
                             <!-- New Task Form -->
-                    <form action="/update/{{$tasks->id}}" method="POST" class="form-horizontal">
+                    <form action="/update-task/{{$tasks->id}}" method="POST" class="form-horizontal">
                         {{ csrf_field() }}
-                                    {{method_field('put') }}
+                        {{method_field('put') }}
 
                                 <!-- Task Name -->
                         <div class="form-group">
                             <label for="task-name" class="col-sm-3 control-label">Name</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="name" id="task-name" class="form-control" value="{{$tasks->name }}">
+                                <input type="text" name="name" id="task-name" class="form-control"
+                                       value="{{$tasks->name }}">
                             </div>
                         </div>
 
-                        <!-- Task Address -->
+                        <!-- Task Name -->
                         <div class="form-group">
-                            <label for="task-address" class="col-sm-3 control-label">Address</label>
+                            <label for="task-name" class="col-sm-3 control-label">Name</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="address" id="task-address" class="form-control" value="{{$tasks->address }}">
+                                <input type="text" name="name" id="task-name" class="form-control"
+                                       value="{{$tasks->name }}">
                             </div>
                         </div>
+
+                        <!-- Task alamat -->
+                        <div class="form-group">
+                            <label for="task-alamat" class="col-sm-3 control-label">alamat</label>
+
+                            <div class="col-sm-6">
+                                <input type="text" name="alamat" id="task-alamat" class="form-control"
+                                       value="{{$tasks->alamat }}">
+                            </div>
+                        </div>
+
+                        <!-- Task umur -->
+                        <div class="form-group">
+                            <label for="task- umur " class="col-sm-3 control-label"> umur </label>
+
+                            <div class="col-sm-6">
+                                <input type="text" name=" umur " id="task- umur " class="form-control"
+                                       value="{{$tasks-> umur  }}">
+                            </div>
+                        </div>
+
+                        <!-- Task jenis_kelamin -->
+                        <div class="form-group">
+                            <label for="task-jenis_kelamin" class="col-sm-3 control-label">jenis_kelamin</label>
+
+                            <div class="col-sm-6">
+                                <input type="text" name="jenis_kelamin" id="task-jenis_kelamin" class="form-control"
+                                       value="{{$tasks->jenis_kelamin }}">
+                            </div>
+                        </div>
+
+                        <!-- Task jenis_kamar -->
+                        <div class="form-group">
+                            <label for="task-jenis_kamar" class="col-sm-3 control-label">jenis_kamar</label>
+
+                            <div class="col-sm-6">
+                                <input type="text" name="jenis_kamar" id="task-jenis_kamar" class="form-control"
+                                       value="{{$tasks->jenis_kamar}}">
+                            </div>
+                        </div>
+
 
                         <!-- Add Task Button -->
                         <div class="form-group">
@@ -42,7 +85,7 @@
                                     <i class="fa fa-plus"></i>Add Task
                                 </button>
 
-                                <a href="/"class="btn btn-default">Kembali</a>
+                                <a href="/" class="btn btn-default">Kembali</a>
                             </div>
                         </div>
                     </form>
@@ -52,6 +95,6 @@
 
             <!-- Current Tasks -->
 
-    </div>
+        </div>
     </div>
 @endsection
